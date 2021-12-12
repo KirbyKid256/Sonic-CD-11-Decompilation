@@ -27,4 +27,8 @@ const char* getResourcesPath(void)
         return (char*)[gameData UTF8String];
     }
 }
+
+const float getMacScreenScale(void){
+    return NSScreen.mainScreen.backingScaleFactor;
+}
 #endif
