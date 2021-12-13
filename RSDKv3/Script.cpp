@@ -2804,7 +2804,16 @@ void ProcessScript(int scriptCodeStart, int jumpTableStart, byte scriptSub)
                     case VAR_ENGINEFRAMESKIPSETTING: scriptEng.operands[i] = Engine.frameSkipSetting; break;
                     case VAR_ENGINESFXVOLUME: scriptEng.operands[i] = sfxVolume; break;
                     case VAR_ENGINEBGMVOLUME: scriptEng.operands[i] = bgmVolume; break;
-                    case VAR_ENGINEPLATFORMID: scriptEng.operands[i] = RETRO_GAMEPLATFORMID; break;
+                    case VAR_ENGINEPLATFORMID:
+                        if(Engine.bytecodeMode == BYTECODE_MOBILE){
+                            scriptEng.operands[i] = RETRO_iOS;
+                            //If you use mobile data then tell the game we're a mobile version.
+                            //Otherwise you get the "Remove Ads" option which crashes the game.
+                        }
+                        else{
+                            scriptEng.operands[i] = RETRO_GAMEPLATFORMID;
+                        }
+                            break;
                     case VAR_ENGINETRIALMODE: scriptEng.operands[i] = Engine.trialMode; break;
                     case VAR_KEYPRESSANYSTART: scriptEng.operands[i] = anyPress; break;
 #if RETRO_USE_HAPTICS
