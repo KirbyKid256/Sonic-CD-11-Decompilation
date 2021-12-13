@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E37393D275D99E700446DD3 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219892589B3D900B47AB3 /* Ogg.framework */; };
-		9E37393E275D99E700446DD3 /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219892589B3D900B47AB3 /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E6B4159275DA6AF003834A4 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B4157275DA6AF003834A4 /* main.mm */; };
+		9E6B415A275DA6AF003834A4 /* IndirectMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B4158275DA6AF003834A4 /* IndirectMain.cpp */; };
+		9E6B415F275DA708003834A4 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415B275DA708003834A4 /* Ogg.framework */; };
+		9E6B4160275DA708003834A4 /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415B275DA708003834A4 /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E6B4161275DA708003834A4 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415C275DA708003834A4 /* SDL2.framework */; };
+		9E6B4162275DA708003834A4 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415C275DA708003834A4 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E6B4163275DA708003834A4 /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415D275DA708003834A4 /* Vorbis.framework */; };
+		9E6B4164275DA708003834A4 /* Vorbis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415D275DA708003834A4 /* Vorbis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E6B4165275DA708003834A4 /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415E275DA708003834A4 /* Theora.framework */; };
+		9E6B4166275DA708003834A4 /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415E275DA708003834A4 /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E6B4168275DB5D0003834A4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B4167275DB5D0003834A4 /* AppKit.framework */; };
+		9E6B416A275DB5D8003834A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B4169275DB5D8003834A4 /* Foundation.framework */; };
 		C92834D22615E66D00D51CCE /* Ini.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BC2615E66C00D51CCE /* Ini.cpp */; };
 		C92834D32615E66D00D51CCE /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BD2615E66C00D51CCE /* Scene.cpp */; };
 		C92834D42615E66D00D51CCE /* Scene3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BE2615E66C00D51CCE /* Scene3D.cpp */; };
 		C92834D52615E66D00D51CCE /* Debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BF2615E66C00D51CCE /* Debug.cpp */; };
 		C92834D62615E66D00D51CCE /* RetroEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834C02615E66C00D51CCE /* RetroEngine.cpp */; };
 		C92834D72615E66D00D51CCE /* Palette.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834C12615E66C00D51CCE /* Palette.cpp */; };
-		C92834D82615E66D00D51CCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834C22615E66C00D51CCE /* main.cpp */; };
 		C92834D92615E66D00D51CCE /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834C32615E66C00D51CCE /* Sprite.cpp */; };
 		C92834DA2615E66D00D51CCE /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834C42615E66C00D51CCE /* Object.cpp */; };
 		C92834DB2615E66D00D51CCE /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834C52615E66C00D51CCE /* String.cpp */; };
@@ -32,12 +41,6 @@
 		C92834E62615E66D00D51CCE /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834D02615E66D00D51CCE /* Drawing.cpp */; };
 		C92834E72615E66D00D51CCE /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834D12615E66D00D51CCE /* Video.cpp */; };
 		C962193925898B0B00B47AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C962193625898B0A00B47AB3 /* Assets.xcassets */; };
-		C96219842589B10600B47AB3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219832589B10600B47AB3 /* SDL2.framework */; };
-		C96219852589B10600B47AB3 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219832589B10600B47AB3 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C96219942589B51000B47AB3 /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219932589B51000B47AB3 /* Vorbis.framework */; };
-		C96219952589B51000B47AB3 /* Vorbis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219932589B51000B47AB3 /* Vorbis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C96219972589B51E00B47AB3 /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219962589B51E00B47AB3 /* Theora.framework */; };
-		C96219982589B51E00B47AB3 /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219962589B51E00B47AB3 /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C96219A02589B7AB00B47AB3 /* theoraplay.c in Sources */ = {isa = PBXBuildFile; fileRef = C962199F2589B7AB00B47AB3 /* theoraplay.c */; };
 		C96219A5258C632A00B47AB3 /* cocoaHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = C96219A4258C632A00B47AB3 /* cocoaHelpers.mm */; };
 		C975E72826E32FB700F09AD4 /* ModAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C975E72726E32FB700F09AD4 /* ModAPI.cpp */; };
@@ -46,16 +49,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C96219862589B10600B47AB3 /* Embed Frameworks */ = {
+		9E6B4155275DA564003834A4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C96219852589B10600B47AB3 /* SDL2.framework in Embed Frameworks */,
-				C96219952589B51000B47AB3 /* Vorbis.framework in Embed Frameworks */,
-				9E37393E275D99E700446DD3 /* Ogg.framework in Embed Frameworks */,
-				C96219982589B51E00B47AB3 /* Theora.framework in Embed Frameworks */,
+				9E6B4160275DA708003834A4 /* Ogg.framework in Embed Frameworks */,
+				9E6B4162275DA708003834A4 /* SDL2.framework in Embed Frameworks */,
+				9E6B4164275DA708003834A4 /* Vorbis.framework in Embed Frameworks */,
+				9E6B4166275DA708003834A4 /* Theora.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +66,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E50D38B2766CFA9003076CD /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = dependencies/mac/boost.framework; sourceTree = "<group>"; };
+		9E6B4156275DA6AF003834A4 /* IndirectMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndirectMain.h; path = dependencies/mac/IndirectMain.h; sourceTree = SOURCE_ROOT; };
+		9E6B4157275DA6AF003834A4 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = dependencies/mac/main.mm; sourceTree = SOURCE_ROOT; };
+		9E6B4158275DA6AF003834A4 /* IndirectMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndirectMain.cpp; path = dependencies/mac/IndirectMain.cpp; sourceTree = SOURCE_ROOT; };
+		9E6B415B275DA708003834A4 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/Ogg.framework; sourceTree = "<group>"; };
+		9E6B415C275DA708003834A4 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = dependencies/mac/SDL2.framework; sourceTree = "<group>"; };
+		9E6B415D275DA708003834A4 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = dependencies/mac/Vorbis.framework; sourceTree = "<group>"; };
+		9E6B415E275DA708003834A4 /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/Theora.framework; sourceTree = "<group>"; };
+		9E6B4167275DB5D0003834A4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9E6B4169275DB5D8003834A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C92834A72615E64C00D51CCE /* String.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = String.hpp; sourceTree = "<group>"; };
 		C92834A82615E64C00D51CCE /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		C92834A92615E64C00D51CCE /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Input.hpp; sourceTree = "<group>"; };
@@ -108,10 +121,6 @@
 		C92834D12615E66D00D51CCE /* Video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Video.cpp; sourceTree = "<group>"; };
 		C962191925898A9300B47AB3 /* RSDKv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSDKv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C962193625898B0A00B47AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = dependencies/mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		C96219832589B10600B47AB3 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = dependencies/mac/SDL2.framework; sourceTree = "<group>"; };
-		C96219892589B3D900B47AB3 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/Ogg.framework; sourceTree = "<group>"; };
-		C96219932589B51000B47AB3 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = dependencies/mac/Vorbis.framework; sourceTree = "<group>"; };
-		C96219962589B51E00B47AB3 /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/Theora.framework; sourceTree = "<group>"; };
 		C962199A2589B57300B47AB3 /* theoraplay_cvtrgb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = theoraplay_cvtrgb.h; path = dependencies/all/theoraplay/theoraplay_cvtrgb.h; sourceTree = SOURCE_ROOT; };
 		C962199B2589B57300B47AB3 /* theoraplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = theoraplay.h; path = dependencies/all/theoraplay/theoraplay.h; sourceTree = SOURCE_ROOT; };
 		C962199F2589B7AB00B47AB3 /* theoraplay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = theoraplay.c; path = dependencies/all/theoraplay/theoraplay.c; sourceTree = SOURCE_ROOT; };
@@ -129,11 +138,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E37393D275D99E700446DD3 /* Ogg.framework in Frameworks */,
-				C96219842589B10600B47AB3 /* SDL2.framework in Frameworks */,
-				C96219942589B51000B47AB3 /* Vorbis.framework in Frameworks */,
+				9E6B4161275DA708003834A4 /* SDL2.framework in Frameworks */,
+				9E6B4163275DA708003834A4 /* Vorbis.framework in Frameworks */,
+				9E6B415F275DA708003834A4 /* Ogg.framework in Frameworks */,
+				9E6B4168275DB5D0003834A4 /* AppKit.framework in Frameworks */,
+				9E6B4165275DA708003834A4 /* Theora.framework in Frameworks */,
+				9E6B416A275DB5D8003834A4 /* Foundation.framework in Frameworks */,
 				C975E72C26E3303E00F09AD4 /* OpenGL.framework in Frameworks */,
-				C96219972589B51E00B47AB3 /* Theora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,15 +213,16 @@
 		C962194025898B6E00B47AB3 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				C975E72626E32FAC00F09AD4 /* ModAPI.hpp */,
 				C92834B32615E64C00D51CCE /* Animation.hpp */,
 				C92834AA2615E64C00D51CCE /* Audio.hpp */,
 				C92834BA2615E64D00D51CCE /* Collision.hpp */,
 				C92834B82615E64D00D51CCE /* Debug.hpp */,
 				C92834B52615E64C00D51CCE /* Drawing.hpp */,
+				C96219A1258C62FF00B47AB3 /* helpers */,
 				C92834AB2615E64C00D51CCE /* Ini.hpp */,
 				C92834A92615E64C00D51CCE /* Input.hpp */,
 				C92834B62615E64C00D51CCE /* Math.hpp */,
+				C975E72626E32FAC00F09AD4 /* ModAPI.hpp */,
 				C92834B42615E64C00D51CCE /* Object.hpp */,
 				C92834B72615E64D00D51CCE /* Palette.hpp */,
 				C92834A82615E64C00D51CCE /* Player.hpp */,
@@ -222,10 +234,9 @@
 				C92834B12615E64C00D51CCE /* Sprite.hpp */,
 				C92834A72615E64C00D51CCE /* String.hpp */,
 				C92834AC2615E64C00D51CCE /* Text.hpp */,
+				C96219992589B55F00B47AB3 /* theoraPlay */,
 				C92834B22615E64C00D51CCE /* Userdata.hpp */,
 				C92834BB2615E64D00D51CCE /* Video.hpp */,
-				C96219A1258C62FF00B47AB3 /* helpers */,
-				C96219992589B55F00B47AB3 /* theoraPlay */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
@@ -233,11 +244,14 @@
 		C96219822589B10600B47AB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E50D38B2766CFA9003076CD /* boost.framework */,
+				9E6B4169275DB5D8003834A4 /* Foundation.framework */,
+				9E6B4167275DB5D0003834A4 /* AppKit.framework */,
+				9E6B415B275DA708003834A4 /* Ogg.framework */,
+				9E6B415C275DA708003834A4 /* SDL2.framework */,
+				9E6B415E275DA708003834A4 /* Theora.framework */,
+				9E6B415D275DA708003834A4 /* Vorbis.framework */,
 				C975E72B26E3303E00F09AD4 /* OpenGL.framework */,
-				C96219962589B51E00B47AB3 /* Theora.framework */,
-				C96219932589B51000B47AB3 /* Vorbis.framework */,
-				C96219892589B3D900B47AB3 /* Ogg.framework */,
-				C96219832589B10600B47AB3 /* SDL2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,6 +285,9 @@
 		C96219A2258C631100B47AB3 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9E6B4158275DA6AF003834A4 /* IndirectMain.cpp */,
+				9E6B4156275DA6AF003834A4 /* IndirectMain.h */,
+				9E6B4157275DA6AF003834A4 /* main.mm */,
 				C975E72926E32FC600F09AD4 /* tinyxml2.cpp */,
 				C96219A4258C632A00B47AB3 /* cocoaHelpers.mm */,
 			);
@@ -287,7 +304,7 @@
 				C962191525898A9300B47AB3 /* Sources */,
 				C962191625898A9300B47AB3 /* Frameworks */,
 				C962191725898A9300B47AB3 /* Resources */,
-				C96219862589B10600B47AB3 /* Embed Frameworks */,
+				9E6B4155275DA564003834A4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,7 +368,6 @@
 				C92834D42615E66D00D51CCE /* Scene3D.cpp in Sources */,
 				C92834DA2615E66D00D51CCE /* Object.cpp in Sources */,
 				C92834D92615E66D00D51CCE /* Sprite.cpp in Sources */,
-				C92834D82615E66D00D51CCE /* main.cpp in Sources */,
 				C975E72826E32FB700F09AD4 /* ModAPI.cpp in Sources */,
 				C92834DC2615E66D00D51CCE /* Audio.cpp in Sources */,
 				C92834E12615E66D00D51CCE /* Input.cpp in Sources */,
@@ -362,6 +378,7 @@
 				C92834D62615E66D00D51CCE /* RetroEngine.cpp in Sources */,
 				C92834E02615E66D00D51CCE /* Script.cpp in Sources */,
 				C96219A02589B7AB00B47AB3 /* theoraplay.c in Sources */,
+				9E6B415A275DA6AF003834A4 /* IndirectMain.cpp in Sources */,
 				C96219A5258C632A00B47AB3 /* cocoaHelpers.mm in Sources */,
 				C92834E62615E66D00D51CCE /* Drawing.cpp in Sources */,
 				C92834E72615E66D00D51CCE /* Video.cpp in Sources */,
@@ -370,6 +387,7 @@
 				C92834DE2615E66D00D51CCE /* Reader.cpp in Sources */,
 				C975E72A26E32FC600F09AD4 /* tinyxml2.cpp in Sources */,
 				C92834DF2615E66D00D51CCE /* Text.cpp in Sources */,
+				9E6B4159275DA6AF003834A4 /* main.mm in Sources */,
 				C92834D52615E66D00D51CCE /* Debug.cpp in Sources */,
 				C92834E32615E66D00D51CCE /* Math.cpp in Sources */,
 			);
@@ -430,7 +448,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				"MACOSX_DEPLOYMENT_TARGET[arch=arm64]" = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -484,7 +505,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				"MACOSX_DEPLOYMENT_TARGET[arch=arm64]" = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -501,21 +525,22 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/dependencies/mac",
-					"$(PROJECT_DIR)/dependencies/mac/ogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis-1.3.7/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libtheora/macosx",
+					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/all/tinyxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/all/tinyxml2",
+					"$(PROJECT_DIR)/dependencies/mac/Ogg.Framework/Headers/",
+					"$(PROJECT_DIR)/dependencies/mac/SDL2.Framework/Headers/",
+					"$(PROJECT_DIR)/dependencies/mac/boost.framework/Headers/",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST))",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.3.0;
+				"OTHER_LDFLAGS[arch=x86_64]" = "$(SRCROOT)/dependencies/mac/boost.framework/boost";
 				PRODUCT_BUNDLE_IDENTIFIER = Decomp.RSDKv3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -532,21 +557,22 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/dependencies/mac",
-					"$(PROJECT_DIR)/dependencies/mac/ogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis-1.3.7/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libtheora/macosx",
+					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/all/tinyxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/dependencies/all/tinyxml2",
+					"$(PROJECT_DIR)/dependencies/mac/Ogg.Framework/Headers/",
+					"$(PROJECT_DIR)/dependencies/mac/SDL2.Framework/Headers/",
+					"$(PROJECT_DIR)/dependencies/mac/boost.framework/Headers/",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST))",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.3.0;
+				"OTHER_LDFLAGS[arch=x86_64]" = "$(SRCROOT)/dependencies/mac/boost.framework/boost";
 				PRODUCT_BUNDLE_IDENTIFIER = Decomp.RSDKv3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
