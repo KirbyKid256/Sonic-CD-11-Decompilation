@@ -4,18 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Resources/English.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xvZa7r5RUJvaJF/StlZX2cDVlmc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		3EsCQio10Is0iwaUBIgBwEVFuIw=
+		vXUEwWbaUyddDelvXKsbTAKLj8g=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -24,57 +15,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Bkwk4UY8zZpt6vwZlEKnyItmpaY=
+			Zia/0KG5hxGZ0Z8ldiPBOZt+yP8=
 			</data>
 			<key>hash2</key>
 			<data>
-			HQMePLrn3v6WZCbjOAJFClY4ihMj7sHsYp5tQJXGdsU=
+			c4Jl8rliq/2foWI3gDkQkqRle6B2kEXSppxb+2zBpYg=
 			</data>
 		</dict>
 		<key>Headers/vorbisenc.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4QmfKgO72x3ZzC3JSy3IE1kOSz0=
+			xbzTdwQn3DPd4xaDCTvUwlPOU5k=
 			</data>
 			<key>hash2</key>
 			<data>
-			0qugUnJS3CZf/EC8mxlV1awNyNXhbZN2+jZsBfon3H8=
+			xUt2QNvsHcS6BNT7lCdONgArWJKBLJImfa2Vd0HtmRg=
 			</data>
 		</dict>
 		<key>Headers/vorbisfile.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Wmwl/Vs27X3W7CQ4vVd0GZX2pAw=
+			gAP1ftcpRbktEcccQW+nzji4RLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			fZgmTlewGQ7wonAaC+pfmC6C/Bvt2TzZQIov/3eQ+AM=
+			0m+bjHrSZzddUFscqIupViXhRlCq/UzRAchhBC6vDzg=
 			</data>
-		</dict>
-		<key>Resources/English.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xvZa7r5RUJvaJF/StlZX2cDVlmc=
-			</data>
-			<key>hash2</key>
-			<data>
-			iTuEzML2R3dOLoNVoO7pl/IUnTNB7hW8zv1E7T4cL/I=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3EsCQio10Is0iwaUBIgBwEVFuIw=
+			vXUEwWbaUyddDelvXKsbTAKLj8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			DUX5OhFdxUfNncRlg/UZK1T4MdZ0vyO9tsPSQtkUbSE=
+			BLEMTtfpoqGcUKE6N86jmC84LjgMKflChgdHFLpLMAg=
 			</data>
 		</dict>
 	</dict>
