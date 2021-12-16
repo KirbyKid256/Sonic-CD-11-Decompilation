@@ -523,7 +523,8 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 436AD92E6J;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/mac",
 					"$(inherited)",
@@ -537,6 +538,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST))",
+					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.3.0;
@@ -555,7 +557,8 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 436AD92E6J;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/dependencies/mac",
 					"$(inherited)",
@@ -569,6 +572,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST))",
+					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.3.0;
