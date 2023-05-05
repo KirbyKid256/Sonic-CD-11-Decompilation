@@ -54,5 +54,6 @@ inline int StrLength(const char *string)
     return len;
 }
 int FindStringToken(const char *string, const char *token, sbyte stopID);
+int FindLastStringToken(const char *string, const char *token);
 
 #endif // !STRING_H

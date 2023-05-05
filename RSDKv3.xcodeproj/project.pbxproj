@@ -541,7 +541,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				"MACOSX_DEPLOYMENT_TARGET[arch=arm64]" = 11.0;
+				MARKETING_VERSION = 1.3.1;
 				"OTHER_LDFLAGS[arch=x86_64]" = "$(SRCROOT)/dependencies/mac/boost.framework/boost";
 				PRODUCT_BUNDLE_IDENTIFIER = Decomp.RSDKv3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,7 +577,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				"MACOSX_DEPLOYMENT_TARGET[arch=arm64]" = 11.0;
+				MARKETING_VERSION = 1.3.1;
 				"OTHER_LDFLAGS[arch=x86_64]" = "$(SRCROOT)/dependencies/mac/boost.framework/boost";
 				PRODUCT_BUNDLE_IDENTIFIER = Decomp.RSDKv3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
