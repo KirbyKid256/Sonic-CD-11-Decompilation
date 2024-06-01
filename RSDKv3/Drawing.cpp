@@ -661,12 +661,7 @@ void FlipScreenFB()
     glLoadIdentity();
     glRotatef(-90.0, 0.0, 0.0, 1.0);
     glOrtho(0, SCREEN_XSIZE << 4, 0.0, SCREEN_YSIZE << 4, -1.0, 1.0);
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    glViewport(0, 0, SCREEN_YSIZE * scale, SCREEN_XSIZE * scale);
-#else
     glViewport(0, 0, SCREEN_YSIZE, SCREEN_XSIZE);
-#endif
 
     glBindFramebuffer(GL_FRAMEBUFFER, framebufferHW);
 
@@ -706,13 +701,7 @@ void FlipScreenFB()
 
         // Return for blended rendering
         glMatrixMode(GL_PROJECTION);
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    glViewport(0, 0, SCREEN_YSIZE * scale, SCREEN_XSIZE * scale);
-#else
-    glViewport(0, 0, SCREEN_YSIZE, SCREEN_XSIZE);
-#endif
-
+        glViewport(0, 0, SCREEN_YSIZE, SCREEN_XSIZE);
         glPopMatrix();
     }
     else {
@@ -745,13 +734,7 @@ void FlipScreenNoFB()
 
     glLoadIdentity();
     glOrtho(0, SCREEN_XSIZE << 4, SCREEN_YSIZE << 4, 0.0, -1.0, 1.0);
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    //TODO: Do I need to scale viewOffsetX? TBD
-    glViewport(viewOffsetX, 0, viewWidth * scale, viewHeight * scale);
-#else
     glViewport(viewOffsetX, 0, viewWidth, viewHeight);
-#endif
 
     glBindTexture(GL_TEXTURE_2D, gfxTextureID[texPaletteNum]);
     glEnableClientState(GL_COLOR_ARRAY);
@@ -839,13 +822,7 @@ void FlipScreenHRes()
     glLoadIdentity();
 
     glOrtho(0, SCREEN_XSIZE << 4, SCREEN_YSIZE << 4, 0.0, -1.0, 1.0);
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    //TODO: Do I need to scale viewOffsetX? TBD
-    glViewport(viewOffsetX, 0, bufferWidth * scale, bufferHeight * scale);
-#else
     glViewport(viewOffsetX, 0, bufferWidth, bufferHeight);
-#endif
     glBindTexture(GL_TEXTURE_2D, gfxTextureID[texPaletteNum]);
     glDisable(GL_BLEND);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -891,13 +868,7 @@ void RenderFromTexture()
     }
 #endif
     glLoadIdentity();
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    //TODO: Do I need to scale viewOffsetX? TBD
-    glViewport(viewOffsetX, 0, viewWidth * scale, viewHeight * scale);
-#else
     glViewport(viewOffsetX, 0, viewWidth, viewHeight);
-#endif
     glVertexPointer(2, GL_SHORT, sizeof(DrawVertex), &screenRect[0].x);
     glTexCoordPointer(2, GL_SHORT, sizeof(DrawVertex), &screenRect[0].u);
     glDisable(GL_BLEND);
@@ -971,14 +942,7 @@ void RenderFromRetroBuffer()
         glClear(GL_COLOR_BUFFER_BIT);
     }
 #endif
-    
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    //TODO: Do I need to scale viewOffsetX? TBD
-    glViewport(viewOffsetX, 0, viewWidth * scale, viewHeight * scale);
-#else
     glViewport(viewOffsetX, 0, viewWidth, viewHeight);
-#endif
 
     glVertexPointer(2, GL_SHORT, sizeof(DrawVertex), &retroScreenRect[0].x);
     glTexCoordPointer(2, GL_SHORT, sizeof(DrawVertex), &retroScreenRect[0].u);
@@ -1038,15 +1002,7 @@ void FlipScreenVideo()
         glClear(GL_COLOR_BUFFER_BIT);
     }
 #endif
-    
-#if RETRO_PLATFORM == RETRO_OSX
-    float scale = getMacScreenScale();
-    //TODO: Do I need to scale viewOffsetX? TBD
-    glViewport(viewOffsetX, 0, viewWidth * scale, viewHeight * scale);
-#else
     glViewport(viewOffsetX, 0, viewWidth, viewHeight);
-#endif
-
     glVertexPointer(2, GL_FLOAT, sizeof(DrawVertex3D), &screenVerts[0].x);
     glTexCoordPointer(2, GL_SHORT, sizeof(DrawVertex3D), &screenVerts[0].u);
     glDisable(GL_BLEND);
