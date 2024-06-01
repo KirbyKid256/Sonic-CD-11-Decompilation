@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850738C42C0AADBA00D3468A /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 850738B92C0AAD7700D3468A /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		850738C52C0AADBA00D3468A /* Vorbis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 850738BB2C0AAD7700D3468A /* Vorbis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		850738C62C0AADBA00D3468A /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 850738BD2C0AAD7700D3468A /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		850738C82C0AADF400D3468A /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850738B92C0AAD7700D3468A /* Ogg.framework */; };
+		850738C92C0AADF400D3468A /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850738BD2C0AAD7700D3468A /* Theora.framework */; };
+		850738CA2C0AADF400D3468A /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850738BB2C0AAD7700D3468A /* Vorbis.framework */; };
 		9E6B4159275DA6AF003834A4 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B4157275DA6AF003834A4 /* main.mm */; };
 		9E6B415A275DA6AF003834A4 /* IndirectMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B4158275DA6AF003834A4 /* IndirectMain.cpp */; };
-		9E6B415F275DA708003834A4 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415B275DA708003834A4 /* Ogg.framework */; };
-		9E6B4160275DA708003834A4 /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415B275DA708003834A4 /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E6B4161275DA708003834A4 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415C275DA708003834A4 /* SDL2.framework */; };
 		9E6B4162275DA708003834A4 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415C275DA708003834A4 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E6B4163275DA708003834A4 /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415D275DA708003834A4 /* Vorbis.framework */; };
-		9E6B4164275DA708003834A4 /* Vorbis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415D275DA708003834A4 /* Vorbis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E6B4165275DA708003834A4 /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415E275DA708003834A4 /* Theora.framework */; };
-		9E6B4166275DA708003834A4 /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B415E275DA708003834A4 /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E6B4168275DB5D0003834A4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B4167275DB5D0003834A4 /* AppKit.framework */; };
 		9E6B416A275DB5D8003834A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B4169275DB5D8003834A4 /* Foundation.framework */; };
 		C92834D22615E66D00D51CCE /* Ini.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BC2615E66C00D51CCE /* Ini.cpp */; };
@@ -48,6 +48,30 @@
 		C975E72C26E3303E00F09AD4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C975E72B26E3303E00F09AD4 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		850738B82C0AAD7700D3468A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 850738922C0AA8F600D3468A /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9EA087D229FA013200163B50;
+			remoteInfo = Ogg;
+		};
+		850738BA2C0AAD7700D3468A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 850738922C0AA8F600D3468A /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9EA087E629FA099200163B50;
+			remoteInfo = Vorbis;
+		};
+		850738BC2C0AAD7700D3468A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 850738922C0AA8F600D3468A /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 850738AB2C0AA96A00D3468A;
+			remoteInfo = Theora;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		9E6B4155275DA564003834A4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -55,10 +79,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9E6B4160275DA708003834A4 /* Ogg.framework in Embed Frameworks */,
 				9E6B4162275DA708003834A4 /* SDL2.framework in Embed Frameworks */,
-				9E6B4164275DA708003834A4 /* Vorbis.framework in Embed Frameworks */,
-				9E6B4166275DA708003834A4 /* Theora.framework in Embed Frameworks */,
+				850738C42C0AADBA00D3468A /* Ogg.framework in Embed Frameworks */,
+				850738C52C0AADBA00D3468A /* Vorbis.framework in Embed Frameworks */,
+				850738C62C0AADBA00D3468A /* Theora.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,14 +90,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		850738922C0AA8F600D3468A /* Dependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dependencies.xcodeproj; path = dependencies/mac/Dependencies.xcodeproj; sourceTree = "<group>"; };
 		9E50D38B2766CFA9003076CD /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = dependencies/mac/boost.framework; sourceTree = "<group>"; };
 		9E6B4156275DA6AF003834A4 /* IndirectMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndirectMain.h; path = dependencies/mac/IndirectMain.h; sourceTree = SOURCE_ROOT; };
 		9E6B4157275DA6AF003834A4 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = dependencies/mac/main.mm; sourceTree = SOURCE_ROOT; };
 		9E6B4158275DA6AF003834A4 /* IndirectMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndirectMain.cpp; path = dependencies/mac/IndirectMain.cpp; sourceTree = SOURCE_ROOT; };
-		9E6B415B275DA708003834A4 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/Ogg.framework; sourceTree = "<group>"; };
-		9E6B415C275DA708003834A4 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = dependencies/mac/SDL2.framework; sourceTree = "<group>"; };
-		9E6B415D275DA708003834A4 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = dependencies/mac/Vorbis.framework; sourceTree = "<group>"; };
-		9E6B415E275DA708003834A4 /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/Theora.framework; sourceTree = "<group>"; };
+		9E6B415C275DA708003834A4 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		9E6B4167275DB5D0003834A4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9E6B4169275DB5D8003834A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C92834A72615E64C00D51CCE /* String.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = String.hpp; sourceTree = "<group>"; };
@@ -139,21 +161,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E6B4161275DA708003834A4 /* SDL2.framework in Frameworks */,
-				9E6B4163275DA708003834A4 /* Vorbis.framework in Frameworks */,
-				9E6B415F275DA708003834A4 /* Ogg.framework in Frameworks */,
 				9E6B4168275DB5D0003834A4 /* AppKit.framework in Frameworks */,
-				9E6B4165275DA708003834A4 /* Theora.framework in Frameworks */,
 				9E6B416A275DB5D8003834A4 /* Foundation.framework in Frameworks */,
+				850738C82C0AADF400D3468A /* Ogg.framework in Frameworks */,
 				C975E72C26E3303E00F09AD4 /* OpenGL.framework in Frameworks */,
+				850738CA2C0AADF400D3468A /* Vorbis.framework in Frameworks */,
+				850738C92C0AADF400D3468A /* Theora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		850738B32C0AAD7700D3468A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				850738B92C0AAD7700D3468A /* Ogg.framework */,
+				850738BB2C0AAD7700D3468A /* Vorbis.framework */,
+				850738BD2C0AAD7700D3468A /* Theora.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C962191025898A9300B47AB3 = {
 			isa = PBXGroup;
 			children = (
+				850738922C0AA8F600D3468A /* Dependencies.xcodeproj */,
 				C962191B25898A9300B47AB3 /* RSDKv3 */,
 				C962191A25898A9300B47AB3 /* Products */,
 				C96219822589B10600B47AB3 /* Frameworks */,
@@ -247,10 +280,7 @@
 				9E50D38B2766CFA9003076CD /* boost.framework */,
 				9E6B4169275DB5D8003834A4 /* Foundation.framework */,
 				9E6B4167275DB5D0003834A4 /* AppKit.framework */,
-				9E6B415B275DA708003834A4 /* Ogg.framework */,
 				9E6B415C275DA708003834A4 /* SDL2.framework */,
-				9E6B415E275DA708003834A4 /* Theora.framework */,
-				9E6B415D275DA708003834A4 /* Vorbis.framework */,
 				C975E72B26E3303E00F09AD4 /* OpenGL.framework */,
 			);
 			name = Frameworks;
@@ -340,12 +370,42 @@
 			mainGroup = C962191025898A9300B47AB3;
 			productRefGroup = C962191A25898A9300B47AB3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 850738B32C0AAD7700D3468A /* Products */;
+					ProjectRef = 850738922C0AA8F600D3468A /* Dependencies.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C962191825898A9300B47AB3 /* RSDKv3 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		850738B92C0AAD7700D3468A /* Ogg.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Ogg.framework;
+			remoteRef = 850738B82C0AAD7700D3468A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		850738BB2C0AAD7700D3468A /* Vorbis.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Vorbis.framework;
+			remoteRef = 850738BA2C0AAD7700D3468A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		850738BD2C0AAD7700D3468A /* Theora.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Theora.framework;
+			remoteRef = 850738BC2C0AAD7700D3468A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C962191725898A9300B47AB3 /* Resources */ = {
@@ -523,9 +583,10 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 436AD92E6J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 					"$(PROJECT_DIR)/dependencies/mac",
 					"$(inherited)",
 				);
@@ -559,9 +620,10 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 436AD92E6J;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 					"$(PROJECT_DIR)/dependencies/mac",
 					"$(inherited)",
 				);

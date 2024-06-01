@@ -1,11 +1,11 @@
 SDL2: https://www.libsdl.org/download-2.0.php
-just download the appropriate development library for your compiler and place it in "./SDL2/"
+Download the appropriate development library for your compiler (.dmg) and place it in "/Library/Frameworks/", or the user version of that if you can't place it in the root.
 
 libogg: https://xiph.org/downloads/ (libogg)
-download the libogg .zip file and unzip it in "./libogg/", then build the library as a framework, and include it in the xcode proj
+Download the libogg .zip file and unzip it as "./libogg/", then build the library as a framework, and include it in the xcode proj. Most of the Xcode project work has been done for you, just go into "Dependencies.xcodeproj" and build it. For libogg specifically, go into "./libogg/include/ogg" and rename "config_types.h.in" to "config_types.h". I don't know why the Header comes like this
 
 libvorbis: https://xiph.org/downloads/ (libvorbis)
-download the libvorbis .zip file and unzip it in "./libvorbis/", then build the library as a framework, and include it in the xcode proj
+Download the libvorbis .zip file and unzip it in "./libvorbis/", the rest is similar to libogg
 
 libtheora: https://xiph.org/downloads/ (libtheora)
-download the libtheora .zip file and unzip it in "./libtheora/", then build the library as a framework, and include it in the xcode proj
+Download the libtheora .zip file and unzip it as "./libtheora/", the rest is similar to libogg
