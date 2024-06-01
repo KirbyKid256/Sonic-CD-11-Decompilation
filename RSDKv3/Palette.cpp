@@ -72,14 +72,15 @@ void SetLimitedFade(byte paletteID, byte R, byte G, byte B, ushort alpha, int st
         return;
 
     uint alpha2 = 0xFF - alpha;
-    for (int i = startIndex; i < endIndex; ++i) {
+    for (int i = startIndex; i <= endIndex; ++i) {
         PACK_RGB888(activePalette[i], (byte)((ushort)(R * alpha + alpha2 * activePalette32[i].r) >> 8),
                     (byte)((ushort)(G * alpha + alpha2 * activePalette32[i].g) >> 8),
                     (byte)((ushort)(B * alpha + alpha2 * activePalette32[i].b) >> 8));
-        activePalette32[i].r = (byte)((ushort)(R * alpha + alpha2 * activePalette32[i].r) >> 8);
-        activePalette32[i].g = (byte)((ushort)(G * alpha + alpha2 * activePalette32[i].g) >> 8);
-        activePalette32[i].b = (byte)((ushort)(B * alpha + alpha2 * activePalette32[i].b) >> 8);
-        if (renderType == RENDER_HW)
+        if (renderType == RENDER_HW) { // not like this works on HW....
+            activePalette32[i].r = (byte)((ushort)(R * alpha + alpha2 * activePalette32[i].r) >> 8);
+            activePalette32[i].g = (byte)((ushort)(G * alpha + alpha2 * activePalette32[i].g) >> 8);
+            activePalette32[i].b = (byte)((ushort)(B * alpha + alpha2 * activePalette32[i].b) >> 8);
             activePalette[i] |= 1;
+        }
     }
 }

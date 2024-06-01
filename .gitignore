@@ -44,12 +44,9 @@ RSDKv3/[Dd]ata/
 RSDKv3/[Mm]ods/
 RSDKv3/[Ss]cripts/
 RSDKv3/[Vv]ideos/
-RSDKv3/log.txt
-RSDKv3/usage.txt
-RSDKv3/[Ss]ettings.ini
-RSDKv3/[Ss][Dd]ata.bin
-RSDKv3/[Ss][Gg]ame.bin
-RSDKv3/[Uu][Dd]ata.bin
+RSDKv3/*.txt
+RSDKv3/*.ini
+RSDKv3/*.bin
 
 #OSX files
 *.DS_Store
@@ -87,7 +84,7 @@ RSDKv3/[Uu][Dd]ata.bin
 ![Dd]ependencies/ios/dependencies.txt
 ![Dd]ependencies/mac/dependencies.txt
 ![Dd]ependencies/windows-uwp/dependencies.txt
-![Dd]ependencies/android/dependencies.txt
+![Dd]ependencies/android/README.md
 ![Dd]ependencies/android/libogg/include/ogg/config_types.h
 
 RSDKv3UWP/Generated Files
@@ -289,6 +286,7 @@ Ignored/
 .gradle/
 .idea/
 android/key/
+android/app/.cxx
 android/local.properties
 *.apk
 

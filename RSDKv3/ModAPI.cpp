@@ -30,25 +30,22 @@ int OpenModMenu()
     return 1;
 }
 
-//#if RETRO_PLATFORM == RETRO_ANDROID
-// namespace fs = std::__fs::filesystem;
-//#else
-#if RETRO_PLATFORM != RETRO_OSX
+#if RETRO_PLATFORM == RETRO_ANDROID
+namespace fs = std::__fs::filesystem;
+#elif RETRO_PLATFORM == RETRO_OSX
+#include "TargetConditionals.h"
+#if TARGET_CPU_ARM64
+//Filesystem exists on all ARM Macs
 #include <filesystem>
 namespace fs = std::filesystem;
-#else
-    #include "TargetConditionals.h"
-    #if TARGET_CPU_ARM64
-    //Filesystem exists on all ARM Macs
-    #include <filesystem>
-    namespace fs = std::filesystem;
-    #elif TARGET_CPU_X86_64
-    //Filesystem does not exist before macOS 10.15 so use boost instead
-    #include <boost/filesystem.hpp>
-    namespace fs = boost::filesystem;
-    #endif
+#elif TARGET_CPU_X86_64
+//Filesystem does not exist before macOS 10.15 so use boost instead
+#include <boost/filesystem.hpp>
+namespace fs = boost::filesystem;
 #endif
-//#endif
+#else
+namespace fs = std::filesystem;
+#endif
 
 fs::path ResolvePath(fs::path given)
 {

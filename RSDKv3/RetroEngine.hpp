@@ -6,9 +6,18 @@
 
 // Setting this to true removes (almost) ALL changes from the original code, the trade off is that a playable game cannot be built, it is advised to
 // be set to true only for preservation purposes
+#ifndef RETRO_USE_ORIGINAL_CODE
 #define RETRO_USE_ORIGINAL_CODE (0)
+#endif
 
+#ifndef RETRO_USE_MOD_LOADER
 #define RETRO_USE_MOD_LOADER (!RETRO_USE_ORIGINAL_CODE && 1)
+#endif
+
+// Forces all DLC flags to be disabled, this should be enabled in any public releases
+#ifndef RSDK_AUTOBUILD
+#define RSDK_AUTOBUILD (0)
+#endif
 
 // ================
 // STANDARD LIBS
@@ -16,6 +25,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <cmath>
+#if RETRO_USE_MOD_LOADER
+#include <regex>
+#endif
 
 // ================
 // STANDARD TYPES
@@ -95,10 +107,19 @@ typedef unsigned int uint;
 #define DEFAULT_FULLSCREEN   false
 #endif
 
+#if !defined(RETRO_USE_SDL2) && !defined(RETRO_USE_SDL1)
+#define RETRO_USE_SDL2 (1)
+#endif
+
 #if RETRO_PLATFORM == RETRO_WIN || RETRO_PLATFORM == RETRO_OSX || RETRO_PLATFORM == RETRO_iOS || RETRO_PLATFORM == RETRO_VITA                        \
     || RETRO_PLATFORM == RETRO_UWP || RETRO_PLATFORM == RETRO_ANDROID || RETRO_PLATFORM == RETRO_LINUX
+#ifdef RETRO_USE_SDL2
 #define RETRO_USING_SDL1 (0)
 #define RETRO_USING_SDL2 (1)
+#elif defined(RETRO_USE_SDL1)
+#define RETRO_USING_SDL1 (1)
+#define RETRO_USING_SDL2 (0)
+#endif
 #else // Since its an else & not an elif these platforms probably aren't supported yet
 #define RETRO_USING_SDL1 (0)
 #define RETRO_USING_SDL2 (0)
@@ -112,7 +133,9 @@ typedef unsigned int uint;
 #define RETRO_GAMEPLATFORM (RETRO_STANDARD)
 #endif
 
+#ifndef RETRO_USING_OPENGL
 #define RETRO_USING_OPENGL (1)
+#endif
 
 #if RETRO_USING_OPENGL
 #if RETRO_PLATFORM == RETRO_ANDROID
@@ -231,40 +254,44 @@ enum RetroEngineCallbacks {
     CALLBACK_AGEGATE                 = 100,
 
     // Sonic Origins Notify Callbacks
-    NOTIFY_DEATH_EVENT        = 128,
-    NOTIFY_TOUCH_SIGNPOST     = 129,
-    NOTIFY_HUD_ENABLE         = 130,
-    NOTIFY_ADD_COIN           = 131,
-    NOTIFY_KILL_ENEMY         = 132,
-    NOTIFY_SAVESLOT_SELECT    = 133,
-    NOTIFY_FUTURE_PAST        = 134,
-    NOTIFY_GOTO_FUTURE_PAST   = 135,
-    NOTIFY_BOSS_END           = 136,
-    NOTIFY_SPECIAL_END        = 137,
-    NOTIFY_DEBUGPRINT         = 138,
-    NOTIFY_KILL_BOSS          = 139,
-    NOTIFY_TOUCH_EMERALD      = 140,
-    NOTIFY_STATS_ENEMY        = 141,
-    NOTIFY_STATS_CHARA_ACTION = 142,
-    NOTIFY_STATS_RING         = 143,
-    NOTIFY_STATS_MOVIE        = 144,
-    NOTIFY_STATS_PARAM_1      = 145,
-    NOTIFY_STATS_PARAM_2      = 146,
-    NOTIFY_CHARACTER_SELECT   = 147,
-    NOTIFY_SPECIAL_RETRY      = 148,
-    NOTIFY_TOUCH_CHECKPOINT   = 149,
-    NOTIFY_ACT_FINISH         = 150,
-    NOTIFY_1P_VS_SELECT       = 151,
-    NOTIFY_CONTROLLER_SUPPORT = 152,
-    NOTIFY_STAGE_RETRY        = 153,
-    NOTIFY_SOUND_TRACK        = 154,
-    NOTIFY_GOOD_ENDING        = 155,
-    NOTIFY_BACK_TO_MAINMENU   = 156,
-    NOTIFY_LEVEL_SELECT_MENU  = 157,
-    NOTIFY_PLAYER_SET         = 158,
-    NOTIFY_EXTRAS_MODE        = 159,
-    NOTIFY_SPIN_DASH_TYPE     = 160,
-    NOTIFY_TIME_OVER          = 161,
+    NOTIFY_DEATH_EVENT         = 128,
+    NOTIFY_TOUCH_SIGNPOST      = 129,
+    NOTIFY_HUD_ENABLE          = 130,
+    NOTIFY_ADD_COIN            = 131,
+    NOTIFY_KILL_ENEMY          = 132,
+    NOTIFY_SAVESLOT_SELECT     = 133,
+    NOTIFY_FUTURE_PAST         = 134,
+    NOTIFY_GOTO_FUTURE_PAST    = 135,
+    NOTIFY_BOSS_END            = 136,
+    NOTIFY_SPECIAL_END         = 137,
+    NOTIFY_DEBUGPRINT          = 138,
+    NOTIFY_KILL_BOSS           = 139,
+    NOTIFY_TOUCH_EMERALD       = 140,
+    NOTIFY_STATS_ENEMY         = 141,
+    NOTIFY_STATS_CHARA_ACTION  = 142,
+    NOTIFY_STATS_RING          = 143,
+    NOTIFY_STATS_MOVIE         = 144,
+    NOTIFY_STATS_PARAM_1       = 145,
+    NOTIFY_STATS_PARAM_2       = 146,
+    NOTIFY_CHARACTER_SELECT    = 147,
+    NOTIFY_SPECIAL_RETRY       = 148,
+    NOTIFY_TOUCH_CHECKPOINT    = 149,
+    NOTIFY_ACT_FINISH          = 150,
+    NOTIFY_1P_VS_SELECT        = 151,
+    NOTIFY_CONTROLLER_SUPPORT  = 152,
+    NOTIFY_STAGE_RETRY         = 153,
+    NOTIFY_SOUND_TRACK         = 154,
+    NOTIFY_GOOD_ENDING         = 155,
+    NOTIFY_BACK_TO_MAINMENU    = 156,
+    NOTIFY_LEVEL_SELECT_MENU   = 157,
+    NOTIFY_PLAYER_SET          = 158,
+    NOTIFY_EXTRAS_MODE         = 159,
+    NOTIFY_SPIN_DASH_TYPE      = 160,
+    NOTIFY_TIME_OVER           = 161,
+    NOTIFY_TIMEATTACK_MODE     = 162,
+    NOTIFY_STATS_BREAK_OBJECT  = 163,
+    NOTIFY_STATS_SAVE_FUTURE   = 164,
+    NOTIFY_STATS_CHARA_ACTION2 = 165,
 
     // Sega Forever stuff
     // Mod CBs start at about 1000
@@ -288,7 +315,10 @@ enum RetroEngineCallbacks {
     CALLBACK_ONSHOWINTERSTITIAL_PAUSEDURATION = 1014,
     CALLBACK_SHOWCOUNTDOWNMENU                = 1015,
     CALLBACK_ONVISIBLEMAINMENU_1              = 1016,
-    CALLBACK_ONVISIBLEMAINMENU_0              = 1017, 
+    CALLBACK_ONVISIBLEMAINMENU_0              = 1017,
+    CALLBACK_ONSHOWREWARDADS                  = 1018,
+    CALLBACK_ONSHOWBANNER_2                   = 1019,
+    CALLBACK_ONSHOWINTERSTITIAL_5             = 1020, 
 
 #if RETRO_USE_MOD_LOADER
     // Mod CBs start at 0x1000
@@ -444,6 +474,7 @@ public:
 
     bool LoadGameConfig(const char *filepath);
 #if RETRO_USE_MOD_LOADER
+    void LoadXMLWindowText();
     void LoadXMLVariables();
     void LoadXMLPalettes();
     void LoadXMLObjects();
@@ -462,7 +493,11 @@ public:
 
     char gameWindowText[0x40];
     char gameDescriptionText[0x100];
-    const char *gameVersion = "1.3.1";
+#ifdef DECOMP_VERSION
+    const char *gameVersion = DECOMP_VERSION;
+#else
+    const char *gameVersion = "1.3.2";
+#endif
     const char *gamePlatform;
 
     const char *gameRenderTypes[2] = { "SW_Rendering", "HW_Rendering" };
